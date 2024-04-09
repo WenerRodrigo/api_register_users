@@ -3,7 +3,7 @@ Content-Type: application/json
 
 
 {
-    "title": "TechDay",
+    "title": "TechDay 2024",
     "details": "Evento de tecnologia",
     "maximumAttendees": 100
 }
