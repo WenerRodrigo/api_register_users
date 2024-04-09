@@ -4,7 +4,6 @@ import {
   validatorCompiler,
 } from "fastify-type-provider-zod";
 import dotenv from "dotenv";
-import { create } from "domain";
 import { createEvent } from "./routes/create.event";
 
 dotenv.config();
