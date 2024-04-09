@@ -7,3 +7,15 @@ Content-Type: application/json
     "details": "Evento de tecnologia",
     "maximumAttendees": 100
 }
+
+
+###
+
+POST http://localhost:3333/events/f4233520-699f-4caa-b529-b959e7507ad9/attendees
+Content-Type: application/json
+
+
+{
+    "name": "Wener Rodrigo",
+    "email": "wener@123.com.br"
+}

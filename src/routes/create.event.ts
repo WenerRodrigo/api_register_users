@@ -1,8 +1,8 @@
 import { ZodTypeProvider } from "fastify-type-provider-zod";
 import { z } from "zod";
 import { generateSlug } from "../utils/generate-slug";
-import { prisma } from "../lib/prisma";
 import { FastifyInstance } from "fastify";
+import { prisma } from "../lib/prisma";
 
 export async function createEvent(app: FastifyInstance) {
   app.withTypeProvider<ZodTypeProvider>().post(
