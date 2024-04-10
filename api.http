@@ -31,3 +31,7 @@ GET http://localhost:3333/attendees/4/badge
 
 ###
 GET http://localhost:3333/attendees/4/check-in
+
+
+######
+GET http://localhost:3333/events/f8b263e9-9e3b-4839-b63c-acfb925ab1b8/attendees?query=joel
