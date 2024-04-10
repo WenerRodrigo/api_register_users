@@ -3,19 +3,19 @@ Content-Type: application/json
 
 
 {
-    "title": "TechDay 2024",
-    "details": "Evento de tecnologia",
-    "maximumAttendees": 100
+    "title": "Novo Evento 2024",
+    "details": "Evento Teste",
+    "maximumAttendees": 1
 }
 
 
 ###
 
-POST http://localhost:3333/events/f4233520-699f-4caa-b529-b959e7507ad9/attendees
+POST http://localhost:3333/events/f8b263e9-9e3b-4839-b63c-acfb925ab1b8/attendees
 Content-Type: application/json
 
 
 {
     "name": "Wener Rodrigo",
-    "email": "wener@2024.com.br"
+    "email": "wener@2022.com.br"
 }
