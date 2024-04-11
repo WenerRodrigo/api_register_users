@@ -1,7 +1,11 @@
 import fastify from "fastify";
+import fastifySwagger from "@fastify/swagger";
+import fastifySwaggerUI from "@fastify/swagger-ui";
+
 import {
   serializerCompiler,
   validatorCompiler,
+  jsonSchemaTransform,
 } from "fastify-type-provider-zod";
 import dotenv from "dotenv";
 import { createEvent } from "./routes/create.event";
@@ -14,6 +18,23 @@ import { getEventAttendees } from "./routes/get-event-attendees";
 dotenv.config();
 
 const app = fastify();
+
+app.register(fastifySwagger, {
+  swagger: {
+    consumes: ["application/json"],
+    produces: ["application/json"],
+    info: {
+      title: "Event API",
+      description: "API to manage events and attendees",
+      version: "1.0.0",
+    },
+  },
+  transform: jsonSchemaTransform,
+});
+
+app.register(fastifySwaggerUI, {
+  routePrefix: "/docs",
+});
 
 app.setValidatorCompiler(validatorCompiler);
 app.setSerializerCompiler(serializerCompiler);
